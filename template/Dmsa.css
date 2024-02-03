@@ -19,16 +19,12 @@ body {
 nav {
     display: flex;
 }
-nav .logo{
-    padding: 10px;
-}
 
 .logo img {
     width: 200px;
-    height: 100px;
-    padding-bottom: 5px;
+    height: 80px;
+    padding-top: 5px;
     padding-left: 50px;
-    
 }
 
 .header {
@@ -43,14 +39,20 @@ nav .logo{
     color: brown;
     text-decoration: none;
     font-weight: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
+.Body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .Body img {
-    width: 100%;
-    height: 80vh;
-    padding: 30px;
+    width: 60%;
+    height: 70vh;
+    padding: 40px;
     border-radius: 50px;
 }
 
@@ -60,4 +62,26 @@ nav .logo{
 
 .Body .active-2 {
     display: none;
+}
+
+.footer {
+    padding-left: 35%;
+    justify-items: center;
+}
+
+.footer button {
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: aliceblue;
+    border: 1px solid #efe8ea;
+    font-weight: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: background 0.5s;
+}
+
+.footer button {
+  background: #990736c6;
 }
