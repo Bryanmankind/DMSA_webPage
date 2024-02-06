@@ -85,3 +85,24 @@ nav {
 .footer button {
   background: #990736c6;
 }
+
+/* --------------------------------------- Programs Page ---------------------------------------- */
+
+.programs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.sections {
+    padding: 5px 10%;
+}
+
+.sections img {
+    width: 250px;
+    height: 50vh;
+    border-radius: 15px;
+    cursor: pointer; 
+}
