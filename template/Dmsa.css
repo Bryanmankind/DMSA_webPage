@@ -37,9 +37,14 @@ nav {
     margin: 10px;
     display: inline-flex;
     color: brown;
-    text-decoration: none;
     font-weight: 100px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: aqua;
 
 }
 
@@ -54,6 +59,18 @@ nav {
     height: 70vh;
     padding: 40px;
     border-radius: 50px;
+}
+
+.welcome h1 {
+  font-family: "Sofia", sans-serif;
+  font-weight: 100%;
+}
+
+.welcome h1 span {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 100%;
+  height: 100px;
+
 }
 
 .Body .active-1 {
