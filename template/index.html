@@ -30,10 +30,12 @@
     </div>
 
     <!---------------------------------------------- Body  ------------------------------------------------->
-    <div class="Body">
-        <img src="image/Logo.png">
-        <img class="active-1" src="image/2024Team.png">
-        <img class="active-2" src="image/Worship.jpg">
+    <div class="container">
+        <div id="imgs">
+            <img class="active-0 active" src="image/Logo.png">
+            <img class="active-1 hidden" src="image/DIVINE 2.jpg">
+            <img class="active-2 hidden" src="image/DIVINE 3.jpg">
+        </div>
 
         <div class="welcome">
             <h1>WELCOME TO <span>CHURCH</span></h1>
@@ -43,9 +45,25 @@
 
     <!--------------------------------------------- footer  ---------------------------->
     <div class="footer">
-        <button>Prayer Request</button>
-        <button>Plan To Vist</button>
+        <button id="request">Prayer Request</button>
+        <button id="visit">Plan To Visit</button>
     </div>
+    <form id="form" class="hidden">
+        <input type="text" placeholder="Your Request" name="prayer-request">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <form id="form-visit" class="hidden">
+        <input type="text" placeholder="Your Name" name="name" required>
+        <input type="text" placeholder="when do you plan to worship with us?" name="name" required>
+        <input type="text" placeholder="Please give us your phone number" name="contact" required>
+        <input type="text" placeholder="Are you coming alone?" name="name" required>
+        <input type="text" placeholder="Tell us your location?" name="location" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="overlay"></div>
+    
 <script src="Dmsa.js"></script>
 </body>
 </html>
