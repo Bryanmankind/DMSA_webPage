@@ -178,17 +178,29 @@ button {
 /* --------------------------------------- Programs Page ---------------------------------------- */
 
 .programs {
-     padding: 20px 20px;
-     display: flex;
-     grid-gap: 150px;
-     margin-top: 60px;
-    justify-content: center;
+  display: flex;
+  padding: 15px;
+  grid-gap: 150px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
-.sections h1 {
-    font-weight: 500px;
-    font-size: 15px;
-    padding:10px;
+.sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  padding:10px;
+  margin: 0;
+  text-align: center;
 }
 
 .sections img {
@@ -214,7 +226,11 @@ button {
 
 .about-col-1 img {
     width: 80%;
+    height: 100%;
     border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 70px;
+  
 }
 
 .about-col-2 {
@@ -225,6 +241,9 @@ button {
 .about-col-2 p {
     text-align: justify;
     padding: 10px;
+    font-weight: 500;
+    font-style: "Montserrat", sans-serif;
+    line-height: 2;
 }
 
 .Sub-title {
