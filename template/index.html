@@ -23,8 +23,6 @@
                 <ul><li><a href="programs.html">PROGRAMS</a></li></ul>
                 <ul><li><a href="about.html">ABOUT US</a></li></ul>
                 <ul><li><a href="blog.html">BLOG</a></li></ul>
-                <ul><li><a href="contact.html">CONTACT US</a></li></ul>
-                <ul><li><a href="membership.html">MEMBRSHIP</a></li></ul>
             </div>
         </nav>
     </div>
@@ -48,8 +46,10 @@
         <button id="request">Prayer Request</button>
         <button id="visit">Plan To Visit</button>
     </div>
-    <form id="form" class="hidden">
-        <input type="text" placeholder="Your Request" name="prayer-request">
+
+    <form id="form" class="hidden" method="post" action="/">
+        <input type="text" placeholder="Your Email" name="user_email" >
+        <input type="text" placeholder="Your Request" name="prayer_request">
         <button type="submit">Submit</button>
     </form>
     
