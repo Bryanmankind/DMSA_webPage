@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const collection = require('./modules/requestshema.js')
+const {collection, collection1} = require('./modules/requestshema.js')
 const path = require('path')
 
 const app = express();
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.post("/", async (req, res) => {
+app.post("/form", async (req, res) => {
 
     const data = {
         user_email: req.body.user_email,
@@ -29,6 +29,27 @@ app.post("/", async (req, res) => {
         await collection.create(data);
         res.send("Request submitted successfully.");
     } catch (error) {
+        res.status(400).send(error.message);
+    }
+})
+
+app.post('/form-visit', async (req, res) => { 
+    const data1 = {
+        name: req.body.name,
+        time: req.body.time,
+        contact: req.body.contact,
+        NotAlone: req.body.NotAlone,
+        location: req.body.location,
+    }
+
+    try {
+        if (!data1.name || !data1.time || !data1.contact || !data1.NotAlone || !data1.location ) {
+            throw new Error ("All data required");
+        }
+         // Save data to MongoDB
+         await collection1.create(data1);
+         res.send("Request submitted successfully.");
+    }catch (error) {
         res.status(400).send(error.message);
     }
 })

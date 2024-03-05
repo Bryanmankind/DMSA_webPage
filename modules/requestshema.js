@@ -12,7 +12,16 @@ const requestFrom = new mongoose.Schema({
     prayer_request: { type: String, trim: true },
 });
 
+const planToVisit = new mongoose.Schema({
+    name : {type: String, trim: true},
+    time : {type: String, trim: true},
+    contact : {type: Number, trim: true},
+    NotAlone : {type: String, trim: true},
+    location : {type: String, trim: true},
+})
+
 
 const collection = new  mongoose.model('Collection2', requestFrom)
+const collection1 = new  mongoose.model('Collection3', planToVisit)
 
-module.exports = collection
+module.exports = {collection, collection1}
