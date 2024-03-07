@@ -10,6 +10,19 @@ body {
   background-color: brown;
 }
 
+.flash-messages {
+  margin-top: 20px;
+}
+
+.flash-message {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px auto;
+  width: 300px;
+}
+
 /* --------------------------------------------------- NavBar ---------------------------------------------------- */
 
 .Navbar {
@@ -31,7 +44,7 @@ nav {
 
 .header {
   padding: 20px;
-  margin-left: 600px;
+  margin-left: 300px;
 }
 
 .header ul {
@@ -47,7 +60,9 @@ nav {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-
+#nav-but{
+  margin-top: 20px;
+}
 /* ------------------------------------------------- Landing Page ---------------------------------------------- */
 
 .container {

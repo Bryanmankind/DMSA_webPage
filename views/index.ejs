@@ -12,27 +12,25 @@
     <title>Divin Mercy Seat Assembly</title> 
 </head>
 <body>
+    <div id="flash-message" class="hidden">
+        <% if (messages.length > 0) { %>
+            <div class="flash-messages">
+                <% messages.forEach(message => { %>
+                <div class="flash-message">
+                    <%= message %>
+                </div>
+                <% }); %>
+            </div>
+            <% } %>
+    </div>
     <script>
-        // Function to get the value of a query parameter from the URL
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-
-        // Get the flash message from the URL
-        var message = getParameterByName('message');
-
-        // Display the flash message if it exists
-        if (message) {
-            var flashMessage = document.createElement('div');
-            flashMessage.textContent = message;
-            flashMessage.classList.add('flash-message');
-            document.body.appendChild(flashMessage);
+        // Display flash message if it exists
+        var flashMessage = document.getElementById('flash-message');
+        if (flashMessage.textContent.trim() !== '') {
+            flashMessage.classList.remove('hidden');
+            setTimeout(function() {
+                flashMessage.classList.add('hidden');
+            }, 5000); // Dismiss after 5 seconds
         }
     </script>
     <!------------------------------------------- Navbar --------------------------------------------------->
@@ -42,7 +40,7 @@
                 <img src="image/Logo.png">
             </div>
             <div class="header">
-                <ul><li><a href="index.html">HOME</a></li></ul>
+                <ul><li><a href="index.ejs">HOME</a></li></ul>
                 <ul><li><a href="programs.html">PROGRAMS</a></li></ul>
                 <ul><li><a href="programs.html">GIVE</a></li></ul>
                 <ul><li><a href="about.html">ABOUT US</a></li></ul>
@@ -76,8 +74,8 @@
     </div>
 
     <form id="form" class="hidden" method="post" action="/form">
-        <input type="text" placeholder="Your Email" name="user_email" >
-        <input type="text" placeholder="Your Request" name="prayer_request">
+        <input type="text" placeholder="Your Email" name="user_email" required >
+        <input type="text" placeholder="Your Request" name="prayer_request" required>
         <button type="submit">Submit</button>
     </form>
     

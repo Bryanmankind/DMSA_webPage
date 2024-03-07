@@ -1,9 +1,10 @@
 const firstimg = document.querySelector(".active-0");
 const secondimg = document.querySelector(".active-1");
 const thirdimg = document.querySelector(".active-2");
+const forthimg = document.querySelector(".active-3");
 
-setActiveclassImg = 3;
-imgIndex = 2
+setActiveclassImg = 4;
+imgIndex = 3
 
 setInterval(function () {
     imgIndex = imgIndex + 1;
@@ -19,9 +20,15 @@ setInterval(function () {
         thirdimg.classList.remove("hidden");
         thirdimg.classList.add("active");
         setActiveclassImg =  imgIndex;
-    } else {
+    } else if (imgIndex === 3) {
         thirdimg.classList.remove("active");
         thirdimg.classList.add("hidden");
+        forthimg.classList.remove("hidden");
+        forthimg.classList.add("active");
+        setActiveclassImg =  imgIndex;
+    }else {
+        forthimg.classList.remove("active");
+        forthimg.classList.add("hidden");
         firstimg.classList.remove("hidden");
         firstimg.classList.add("active");
         setActiveclassImg =  imgIndex;
@@ -57,3 +64,5 @@ overlay.addEventListener("click", function () {
     overlay.style.display = "none";
 
 })
+
+
