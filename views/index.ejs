@@ -12,18 +12,8 @@
     <title>Divin Mercy Seat Assembly</title> 
 </head>
 <body>
-    <div id="flash-message" class="hidden">
-        <% if (messages.length > 0) { %>
-            <div class="flash-messages">
-                <% messages.forEach(message => { %>
-                <div class="flash-message">
-                    <%= message %>
-                </div>
-                <% }); %>
-            </div>
-            <% } %>
-    </div>
-    <script>
+    
+    <!-- <script>
         // Display flash message if it exists
         var flashMessage = document.getElementById('flash-message');
         if (flashMessage.textContent.trim() !== '') {
@@ -32,7 +22,7 @@
                 flashMessage.classList.add('hidden');
             }, 5000); // Dismiss after 5 seconds
         }
-    </script>
+    </script> -->
     <!------------------------------------------- Navbar --------------------------------------------------->
     <div class="Navbar">
         <nav>
@@ -52,6 +42,17 @@
         </nav>
     </div>
 
+    <!-- <div id="flash-message" class="hidden">
+        <% if (messages.length > 0) { %>
+            <div class="flash-messages">
+                <% messages.forEach(message => { %>
+                <div class="flash-message">
+                    <%= message %>
+                </div>
+                <% }); %>
+            </div>
+            <% } %>
+    </div> -->
     <!---------------------------------------------- Body  ------------------------------------------------->
     <div class="container">
         <div id="imgs">

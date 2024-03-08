@@ -23,18 +23,24 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
-
+    
         // Get the flash message from the URL
         var message = getParameterByName('message');
-
-        // Display the flash message if it exists
-        if (message) {
+    
+        // Display the flash message if it exists and has not been displayed before
+        if (message && !document.querySelector('.flash-message')) {
             var flashMessage = document.createElement('div');
             flashMessage.textContent = message;
             flashMessage.classList.add('flash-message');
             document.body.appendChild(flashMessage);
+    
+            // Set timeout to remove the flash message after 5 seconds
+            setTimeout(function() {
+                flashMessage.remove();
+            }, 3000); // 5000 milliseconds = 5 seconds
         }
     </script>
+    
     <!------------------------------------------- Navbar --------------------------------------------------->
     <div class="Navbar">
         <nav>
@@ -44,8 +50,9 @@
             <div class="header">
                 <ul><li><a href="index.html">HOME</a></li></ul>
                 <ul><li><a href="programs.html">PROGRAMS</a></li></ul>
-                <ul><li><a href="programs.html">GIVE</a></li></ul>
                 <ul><li><a href="about.html">ABOUT US</a></li></ul>
+                <ul><li><a href="about.html">TESTIMONIES</a></li></ul>
+                <ul><li><a href="programs.html">GIVE</a></li></ul>
                 <ul><li><a href="blog.html">BLOG</a></li></ul>
             </div>
             <div>
@@ -76,8 +83,8 @@
     </div>
 
     <form id="form" class="hidden" method="post" action="/form">
-        <input type="text" placeholder="Your Email" name="user_email" >
-        <input type="text" placeholder="Your Request" name="prayer_request">
+        <input type="email" placeholder="Your Email" name="user_email" required>
+        <textarea rows="6" placeholder="Your Request" name="prayer_request" required></textarea>
         <button type="submit">Submit</button>
     </form>
     

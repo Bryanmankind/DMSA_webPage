@@ -30,12 +30,6 @@ app.post("/form", async (req, res) => {
         prayer_request: req.body.prayer_request,
     };
     try {
-        // Validate data before saving to the database
-        if (!data.user_email || !data.prayer_request) {
-            req.flash("message", "Email and Prayer Request are required.");
-            return res.redirect("/?message=Email%20and%20Prayer%20Request%20are%20required.")
-        }
-
         // Save data to MongoDB
         await collection.create(data);
         req.flash("message", "Request submitted successfully.");
@@ -46,10 +40,6 @@ app.post("/form", async (req, res) => {
 })
 
 
-app.get("/form", (req, res) => {
-    req.flash("message", "Email and Prayer Request are required.");
-    res.redirect('/index');
-})
 app.post('/form-visit', async (req, res) => { 
     const data1 = {
         name: req.body.name,
@@ -60,16 +50,11 @@ app.post('/form-visit', async (req, res) => {
     }
 
     try {
-        if (!data1.name || !data1.time || !data1.contact || !data1.NotAlone || !data1.location ) {
-            req.flash ("message", "All data required");
-            return res.redirect("index");
-
-
-        }
+       
          // Save data to MongoDB
          await collection1.create(data1);
          req.flash("message", "Request submitted successfully.");
-         return res.redirect("index");
+         return res.redirect("/?message=Request%20submited%20successfully.")
 
     }catch (error) {
         res.status(400).send(error.message);
