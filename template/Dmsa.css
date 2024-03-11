@@ -211,37 +211,57 @@ button {
   align-items: center;
 }
 
+.Sub-title{
+  margin-left: 50px;
+  font-weight: 400%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .sections-1 {
   display: flex;
-  margin: 20px;
-  
+  margin: 30px
 }
 
 .section-1-left{
   flex-basis: 35%;
+  margin: 10px;
+  margin-bottom: 50px;
+
 }
+
+.section-1-left img {
+  width: 330px;
+  height: 60vh;
+  border-radius: 15px;
+  margin-left: 120px;
+}
+
 .section-1-right{
   flex-basis: 40%;
+  margin-top: 70px;
+  margin-left: 160px;
 }
 
-
-
-.sections-1 h1 {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  margin-left: 100px;
+.section-1-right h1 {
+  margin: 5px;
+  font-weight: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: Maroon; 
+  border-radius: 8px;
+  padding: 5px;
 }
+
+.section-1-right p {
+  line-height: 1.5;
+  text-align: justify;
+  font-style: "Montserrat", sans-serif;
+  margin: 8px;
+
+}
+
 
 .sections-1 p {
 
-}
-
-.sections-1 img {
-    width: 250px;
-    height: 50vh;
-    border-radius: 15px;
-    cursor: pointer; 
 }
 
 /* --------------------------------------- About Page ---------------------------------------- */
@@ -279,7 +299,6 @@ button {
     font-style: "Montserrat", sans-serif;
     line-height: 2;
     font-size: 15px;
-    font-weight: 500;
 }
 
 .Sub-title {
