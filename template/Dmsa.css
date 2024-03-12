@@ -347,6 +347,58 @@ button {
     line-height: 2;
     font-size: 15px;
 }
+/* ............................................... Give .................................................. */
+
+.section-give{
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+}
+
+.section-give img {
+  width: 1000px;
+  height: 40vh;
+  weight: 500;
+}
+
+.section-give h3 {
+  margin-top: 20vh;
+  padding: 10px;
+  color: white;
+  font-style: "Montserrat", sans-serif;
+}
+
+.bank-1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  height: 46vh;
+}
+
+.bank-name {
+  background-color: Brown;
+  width: 320px;
+  height: 40vh;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 15px;
+  margin-right: 60px;
+  
+
+}
+
+.bank-1 img {
+  width: 65px;
+  height: 10vh;
+  border-radius: 15px;
+}
+
+.bank-name h4 {
+  font-weight: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 30px;
+}
 
 /* ----------------------------------------------- Blog -------------------------------------------------- */
 
@@ -354,22 +406,26 @@ button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 70px;
 }
 
 .blog-col-1 {
     flex-basis: 35%;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 .blog-col-1 img {
-    width: 90%;
-    height: 70%;
+    width: 100%;
+    height: 80%;
     border-radius: 20px;
-    margin-left: 70px;
+    margin-left: 40px;
+    margin-top: 40px;
+
 }
 
 .blog-col-2 {
   flex-basis: 60%;
+  padding: 20px;
 }
 
 .blog-col-2 p {
